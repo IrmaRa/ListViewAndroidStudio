@@ -18,6 +18,7 @@ import java.util.ArrayList;
 class TopPlacesAdapter extends ArrayAdapter<Place> {
 
     public TopPlacesAdapter(Context context, ArrayList<Place> places) {
+
         super(context, 0, places);
     }
 
@@ -40,6 +41,7 @@ class TopPlacesAdapter extends ArrayAdapter<Place> {
         country.setText(currentPlace.getCountry());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        imageView.setImageResource(currentPlace.getImage());
 
 
         listItemView.setTag(currentPlace);
